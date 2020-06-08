@@ -33,6 +33,7 @@ defined('_PEXEC') or die('Restricted access');
             </div>
             <div id="preview">
                     <div id="display-post"  width:100%;background-color: black;" >پیش نمایش</div> 
+                    <span id="imgwait" style="display: none"><img  src="{php} echo Link::Build("components/Site/com_persianlatex/asset/images/wait.gif");{/php}"></span>
             </div>
         </div>
     </div>

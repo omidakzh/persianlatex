@@ -15,13 +15,15 @@ $( document ).ready(function() {
             var lvalue = $("textarea#pleditor").val();
             if(lvalue != ''){
                 if(confirm("ایا محتوا پردازش  شود؟")) {
+                    $('#imgwait').show();
                     $.post('?option=persianlatex&task=compilelatex', 
                     {
                         latexcontent:lvalue
                     }
                     ,function(data)
                     {
-                       $("#display-post").html(data);
+                        $('#imgwait').hide();
+                        $("#display-post").html(data);
                     }); 
                 }
             }
