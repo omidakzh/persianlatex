@@ -33,7 +33,11 @@ q:after{content:' �'; font-size:26px; line-height:0;}
 
 /* ----------------------------------------------Wrapper-------------------------------------*/
 
+
+div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:right;}
+
 div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
+
 
 .row1, .row1 a{color:#C0BAB6; background-color:#333333;}
 .row2{color:#979797; background-color:#FFFFFF;}
@@ -68,6 +72,28 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 
 #header{}
 
+
+#header #hgroup{float:left; padding-bottom:20px; padding-top: 5px;}
+#header #hgroup h1, #header #hgroup h2{font-weight:normal; text-transform:none;}
+#header #hgroup h1{font-size:36px; font-family: "B Nazanin"}
+#header #hgroup h2{font-size:13px;font-family: "B Nazanin"}
+
+#header form{display:block; width:290px; float:right; margin:35px 0 0 0; padding:0;}
+#header form input{display:block; float:left; width:200px; margin:0; padding:5px; color:#C0BAB6; background-color:#232323; border:1px solid #666666;}
+#header form #sf_submit{display:block; float:right; width:70px; font-size:12px; font-weight:bold; text-transform:uppercase; color:#FFFFFF; background-color:#FF9900; border:none; cursor:pointer;}
+
+#header nav{display:block; float: right; width:auto; margin:0; padding:10px 0; padding-top: 45px; /*border-bottom:1px solid #DEDEDE;*/}
+#header #latexLogo{display: block; float: left;  margin: 0; padding-bottom: 5px; padding-top: 20px; /*border-bottom: 1px solid #DEDEDE;*/}
+#header #lineUnderMenu{height: 1px; background-color: #DEDEDE}
+#header #lineUnderMenu a{display: inline; float: left}
+#header nav ul{}
+#header nav li{display:inline; margin-right:25px; text-transform:uppercase;}
+#header nav li.last{margin-right:0;}
+#header nav li a{font-size: 20px; font-family: "B Nazanin"}
+#header nav li a:hover{color:#FF9900; background-color:#333333;}
+
+
+
 #header #hgroup{float:left; padding:20px 0;}
 #header #hgroup h1, #header #hgroup h2{font-weight:normal; text-transform:none;}
 #header #hgroup h1{font-size:36px;}
@@ -83,6 +109,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 #header nav li.last{margin-right:0;}
 #header nav li a{}
 #header nav li a:hover{color:#FF9900; background-color:#333333;}
+
 
 /*----------------------------------------------Content Area-------------------------------------*/
 
