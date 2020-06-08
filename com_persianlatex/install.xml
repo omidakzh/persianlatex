@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+    type="com"
+    version="1.0.0"
+    client="Site"
+    method="install">
+    <name>persianlatex</name>
+    <author>POLCMS! Project</author>
+    <creationDate>Saturday 6th of June 2020 05:55:23 AM</creationDate>
+    <copyright>Copyright (C) 2020 - 2025 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>info@polnet.ir</authorEmail>
+    <authorUrl>www.polcms.ir</authorUrl>
+    <version>1.0.0</version>
+    <title>پرشین لاتک</title>
+    <description>سامانه لاتک برخط </description>
+    <files>
+        <folder>languages</folder>
+        <folder>asset</folder>
+        <folder>controllers</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+        
+        <filename>controller.php</filename>
+        <filename>persianlatex.php</filename>
+        
+        <filename>index.html</filename>
+        <filename>changelog.php</filename>
+        <filename type="icon" size="16">persianlatex.png</filename>
+        <filename>install.xml</filename>
+        
+        <sql>persianlatex.sql</sql>
+        
+        <core>tbl.persianlatex.php</core>
+    </files>
+</extension>
