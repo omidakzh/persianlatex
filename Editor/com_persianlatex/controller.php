@@ -32,6 +32,15 @@ class persianlatexController extends PComponent
         // Display the page
         $comapplication->display('site_persianlatex.tpl.php');
     }
+    function switchEditor()
+    {
+       if(isset($_POST['latexswitch']))
+       { 
+        $model = self::getModel('Site','persianlatex','site_persianlatex');
+        $model->plswitch($_POST['latexswitch']);
+        exit;
+       }
+    }
     function compilelatex()
     {
      if(isset($_POST['latexcontent']))
@@ -41,6 +50,5 @@ class persianlatexController extends PComponent
         exit;
        }
     }
-
  }
 ?>

@@ -12,6 +12,8 @@ defined('_PEXEC') or die('Restricted access');
 
 Changelog
 ------------ 
+2.0.0
++  add switch of editor
 1.0.0
 + Initial Release
 

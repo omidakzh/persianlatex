@@ -30,5 +30,21 @@ $( document ).ready(function() {
           
             return false;
         });
+        
+        $("#plswitch").change(function(){
+            tinyMCE.triggerSave();
+            if($(this).prop("checked") == true){ 
+               //run code
+               $('#imgwait').show();
+               window.location = 'index.php?option=persianlatex&pls=1#component';
+              
+            }else{
+               //run code
+               $('#imgwait').show();
+               window.location = 'index.php?option=persianlatex&pls=0#component';
+;
+            }
+        });
+
     
 });

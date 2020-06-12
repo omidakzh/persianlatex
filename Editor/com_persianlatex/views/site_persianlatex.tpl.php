@@ -20,6 +20,13 @@ defined('_PEXEC') or die('Restricted access');
     <div id="lright"> 
         <div id="ltoobar" class="ltoobar">
             <div id="main" >
+                  
+                <label class="switch" style="margin: 16px -70px;position: absolute;" title="مفسر زبان ها/ویرایشگر ساده">
+                  <input type="checkbox" id="plswitch" value="1">
+                  <span class="slider round"></span>
+                </label>
+               
+
               <input type="button" id="buttonpost" value="اجرا"  />
               <span style="font-size:30px;cursor:pointer" onclick="openNav()">پرشین لاتِک&#9776;</span>
               
