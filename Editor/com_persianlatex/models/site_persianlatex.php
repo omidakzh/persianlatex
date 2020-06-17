@@ -79,7 +79,7 @@ tinymce.init({
 <link rel="stylesheet"
   href="components/Site/com_persianlatex/asset/js/tinymce/plugins/codemirror/lib/codemirror.css">
 </link>
-<link rel="stylesheet" href="components/Site/com_persianlatex/asset/js/tinymce/plugins/codemirror/theme/xq-dark.css">
+<link rel="stylesheet" href="components/Site/com_persianlatex/asset/js/tinymce/plugins/codemirror/theme/mdn-like.css">
 
 <script type="text/javascript"
   src="components/Site/com_persianlatex/asset/js/tinymce/plugins/codemirror/lib/codemirror.js">
@@ -87,7 +87,7 @@ tinymce.init({
 <script src="components/Site/com_persianlatex/asset/js/tinymce/plugins/codemirror/mode/stex/stex.js"></script>
 
 '; 
-              $this->sample= file_get_contents("http://127.0.0.1/polnet/components/Site/com_persianlatex/models/samplelatex.txt");
+              $this->sample= file_get_contents("components/Site/com_persianlatex/models/samplelatex.txt");
               $this->chk = "checked='checked'";
           }
           PCOnfig::$headscripts =$this->scriptz;

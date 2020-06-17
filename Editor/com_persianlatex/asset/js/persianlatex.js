@@ -64,7 +64,7 @@ $( document ).ready(function() {
           lineNumbers: true
         
         });
-//        editor.setOption("theme", 'xq-dark');
+        editor.setOption("theme", 'mdn-like');
 
 
     
