@@ -11,7 +11,9 @@ function closeNav() {
 $( document ).ready(function() {
     
         $("#buttonpost").on("click", function(){
-            tinyMCE.triggerSave();
+             if($('#plswitch1').prop("checked") == false){
+                tinyMCE.triggerSave();
+             }
             var lvalue = $("textarea#pleditor").val();
             if(lvalue != ''){
                 if(confirm("ایا محتوا پردازش  شود؟")) {
@@ -45,6 +47,25 @@ $( document ).ready(function() {
 ;
             }
         });
+        $("#plswitch1").change(function(){
+            if($(this).prop("checked") == true){ 
+               //run code
+               $('#imgwait').show();
+               window.location = 'index.php?option=persianlatex&pls=2#component';
+            }else{
+               //run code
+               $('#imgwait').show();
+               window.location = 'index.php?option=persianlatex&pls=0#component';
+            }
+        });
+        var editor = CodeMirror.fromTextArea(document.getElementById("pleditor"), 
+        {
+          mode: "stex",
+          lineNumbers: true
+        
+        });
+        editor.setOption("theme", 'mdn-like');
+
 
     
 });

@@ -6,16 +6,24 @@ class persianlatexModelsite_persianlatex
   {
 
       public $sample;
+      public $chk;
+      public $chk1;
       public $scriptz;
 
       
       public function __construct()
       {
           PCOnfig::$title =" سامانه لاتک پارسی";
-          if(isset($_GET['pls'])){
-             $_GET['pls']?self::plswitch(1):self::plswitch(0);
+          if(isset($_GET['pls'])){ 
+              if($_GET['pls']==2)
+              {
+                  self::plswitch(2);
+              }else{
+                  $_GET['pls']?self::plswitch(0):self::plswitch(1);    
+              }
+             
           }else{
-              self::plswitch(0);
+              self::plswitch(1);
           }
       }
       public function compilelatex($latexcontent)
@@ -25,7 +33,7 @@ class persianlatexModelsite_persianlatex
       }
       public function plswitch($s)
       {
-          if($s){  
+          if($s==0){  
               $this->scriptz = ' 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="components/Site/com_persianlatex/asset/js/tinymce/tinymce.min.js"></script>
@@ -50,7 +58,9 @@ tinymce.init({
   content_css: "//www.tiny.cloud/css/codepen.min.css"
 });    
 </script>';
-          }else{
+              $this->sample='<p style="text-align: center;"><strong>.ویرایشگر زبان های برنامه نویسی</strong></p>'; 
+              $this->chk1 = "checked='checked'";
+          }elseif($s==1){
               $this->scriptz = ' 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="components/Site/com_persianlatex/asset/js/tinymce/tinymce.min.js"></script>
@@ -62,7 +72,23 @@ tinymce.init({
       height: "415px"
     });
     
-</script>'; 
+</script>';
+              $this->sample="ویرایشگر معمولی";
+          }elseif($s==2){
+              $this->scriptz = '  
+<link rel="stylesheet"
+  href="components/Site/com_persianlatex/asset/js/tinymce/plugins/codemirror/lib/codemirror.css">
+</link>
+<link rel="stylesheet" href="components/Site/com_persianlatex/asset/js/tinymce/plugins/codemirror/theme/mdn-like.css">
+
+<script type="text/javascript"
+  src="components/Site/com_persianlatex/asset/js/tinymce/plugins/codemirror/lib/codemirror.js">
+</script>
+<script src="components/Site/com_persianlatex/asset/js/tinymce/plugins/codemirror/mode/stex/stex.js"></script>
+
+'; 
+              $this->sample= file_get_contents("components/Site/com_persianlatex/models/samplelatex.txt");
+              $this->chk = "checked='checked'";
           }
           PCOnfig::$headscripts =$this->scriptz;
 //          header('location: index.php?option=persianlatex#component');

@@ -22,7 +22,11 @@ defined('_PEXEC') or die('Restricted access');
             <div id="main" >
                   
                 <label class="switch" style="margin: 16px -70px;position: absolute;" title="مفسر زبان ها/ویرایشگر ساده">
-                  <input type="checkbox" id="plswitch" value="1">
+                  <input type="checkbox" id="plswitch" value="1"{$obj->chk1}>
+                  <span class="slider round"></span>
+                </label>
+                <label class="switch" style="margin: 16px -138px;position: absolute;" title="ویرایشگر لاتک">
+                  <input type="checkbox" id="plswitch1" value="0" {$obj->chk}>
                   <span class="slider round"></span>
                 </label>
                
@@ -35,7 +39,7 @@ defined('_PEXEC') or die('Restricted access');
         <div id="lpanels" class="ltoobar">
             <div  id="editor"> 
                  <div class="texteditor-container">
-                     <textarea name="pleditor" id="pleditor"></textarea> 
+                     <textarea name="pleditor" id="pleditor">{$obj->sample}</textarea> 
                  </div>
             </div>
             <div id="preview">
