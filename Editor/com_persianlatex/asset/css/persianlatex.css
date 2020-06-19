@@ -174,3 +174,16 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 /*                                                     پایان  ویرایشگر*/
+
+#priviewtitle {
+    display: none;
+    border: 1px solid black;
+    padding: 3px;
+    margin: -5px -5px;
+    position: absolute;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    float: left;
+    width: 50%;
+}

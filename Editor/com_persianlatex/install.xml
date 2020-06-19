@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension
     type="com"
-    version="3.0.0"
+    version="4.0.0"
     client="Site"
     method="install">
     <name>persianlatex</name>
@@ -11,7 +11,7 @@
     <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <authorEmail>info@polnet.ir</authorEmail>
     <authorUrl>www.polcms.ir</authorUrl>
-    <version>3.0.0</version>
+    <version>4.0.0</version>
     <title>پرشین لاتک</title>
     <description>سامانه لاتک برخط </description>
     <files>

@@ -9,6 +9,8 @@ class persianlatexModelsite_persianlatex
       public $chk;
       public $chk1;
       public $scriptz;
+      public $themez;
+      
 
       
       public function __construct()
@@ -25,6 +27,15 @@ class persianlatexModelsite_persianlatex
           }else{
               self::plswitch(1);
           }
+          $this->themez = scandir(COMPONENTS_DIR.'Site'.DS.'com_persianlatex/asset/js/tinymce/plugins/codemirror/theme');
+          foreach($this->themez  as $idx =>$item)
+          {
+              if($item[$idx] !='.' ){
+                $thems[] =array('name'=>(substr($item,0,strlen($item)-4))) ; 
+              }
+          }
+          $this->themez=HtmlHandler::gComboBoxWithArray($thems,'name','name',"themez");
+          
       }
       public function compilelatex($latexcontent)
       {
@@ -62,7 +73,6 @@ tinymce.init({
               $this->chk1 = "checked='checked'";
           }elseif($s==1){
               $this->scriptz = ' 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="components/Site/com_persianlatex/asset/js/tinymce/tinymce.min.js"></script>
   <script>
     tinymce.init({
@@ -75,7 +85,11 @@ tinymce.init({
 </script>';
               $this->sample="ویرایشگر معمولی";
           }elseif($s==2){
-              $this->scriptz = '  
+              $this->scriptz = '
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+          src="components/Site/com_persianlatex/asset/js/es5/tex-mml-chtml.js">
+  </script>  
 <link rel="stylesheet"
   href="components/Site/com_persianlatex/asset/js/tinymce/plugins/codemirror/lib/codemirror.css">
 </link>
@@ -87,7 +101,7 @@ tinymce.init({
 <script src="components/Site/com_persianlatex/asset/js/tinymce/plugins/codemirror/mode/stex/stex.js"></script>
 
 '; 
-              $this->sample= file_get_contents("components/Site/com_persianlatex/models/samplelatex.txt");
+              $this->sample= file_get_contents("components/Site/com_persianlatex/models/samplelatex1.txt");
               $this->chk = "checked='checked'";
           }
           PCOnfig::$headscripts =$this->scriptz;
