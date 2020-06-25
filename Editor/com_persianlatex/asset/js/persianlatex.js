@@ -10,6 +10,14 @@ function closeNav() {
 
 
 $( document ).ready(function() {
+    
+    $('.lfooterDrawer .open').on('click', function() {
+
+            $('.lfooterDrawer .content').slideToggle();
+
+      });
+    
+    
         $('#preview').on({
             'mouseenter':function(){
                 $('#priviewtitle').slideDown();
