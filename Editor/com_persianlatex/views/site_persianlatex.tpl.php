@@ -46,6 +46,7 @@ defined('_PEXEC') or die('Restricted access');
 
 <script type="text/javascript" src="{php} echo Link::Build('components/Site/com_persianlatex/asset/js/tinymce/plugins/codemirror/addon/hint/javascript-hint.js');{/php}"></script>
 <script type="text/javascript" src="{php} echo Link::Build('components/Site/com_persianlatex/asset/js/tinymce/plugins/codemirror/addon/hint/show-hint.js');{/php}"></script>
+<script type="text/javascript" src="{php} echo Link::Build('components/Site/com_persianlatex/asset/js/cg_cg.min.js');{/php}"></script>
 <script type="text/javascript" src="{php} echo Link::Build('components/Site/com_persianlatex/asset/js/tinymce/plugins/codemirror/mode/javascript/javascript.js');{/php}"></script>
 
 <script type="text/javascript" src="{php} echo Link::Build('components/Site/com_persianlatex/asset/js/persianlatex.js');{/php}"></script>
