@@ -5,7 +5,8 @@
 
 /*
   با توجه به اینکه المان های "اچ تی ام ال" در مرورگرهای مختلف دارای مقادیر پیش فرض متفاوتی می باشند
-  لذا برای یکپارچه سازی نمایش سایت در همه جا، در اینجا سعی شده است تا مقادیر پیش فرض نادیده گرفته شده و به آنها مقدار داده شود
+  لذا برای یکپارچه سازی نمایش سایت در همه جا، در اینجا سعی شده است تا مقادیر پیش فرض مرورگر
+   .نادیده گرفته شده و به آنها مقدار اولیه داده شود
 */
 
 html, body, div, span, applet, object, iframe,
@@ -53,9 +54,9 @@ table {
 }
 
 /*
-  ========================================
+  =================================================================================================================================
   Custom styles
-  ========================================
+  =================================================================================================================================
 */
 
 body {
@@ -95,6 +96,9 @@ body {
   display: inline-block;
   vertical-align: top;
   width: 33.33%;
+}
+div.group {
+  margin-bottom: 10px;
 }
 
 
@@ -194,6 +198,14 @@ a:hover {
 p a {
   border-bottom: 1px solid #dfe2e5;
 }
+.primary-header a,
+.primary-footer a {
+  color: #ffffff;
+}
+.primary-header a:hover,
+.primary-footer a:hover {
+  color: #648880;
+}
 
 /*
   ========================================
@@ -212,7 +224,7 @@ p a {
 }
 .btn-alt {
   border: 1px solid #ffffff;
-  padding: 10px 30px;
+  
   width: 150px;
 }
 .btn-alt:hover{
@@ -236,19 +248,14 @@ p a {
   padding: 40px 0 22px 0;
   text-transform: uppercase;
 }
+
+/*
 .searchform {
   margin: 66px 0 22px 10px;
   text-align: left;
 }
+*/
 
-.primary-header a,
-.primary-footer a {
-  color: #ffffff;
-}
-.primary-header a:hover,
-.primary-footer a:hover {
-  color: #648880;
-}
 
 /*
   ========================================
@@ -278,6 +285,7 @@ p a {
   font-weight: 400;
   letter-spacing: .5px;
   text-transform: uppercase;
+  padding-top: 76px;
 }
 .nav {
   text-align: left;
@@ -309,7 +317,4 @@ p a {
 .introduce p {
   font-size: 24px;
   font-weight: 100;
-}
-.charter a:hover h3 {
-  color: #a9b2b9;
 }
