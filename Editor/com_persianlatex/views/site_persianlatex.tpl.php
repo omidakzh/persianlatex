@@ -49,7 +49,7 @@ defined('_PEXEC') or die('Restricted access');
 <script type="text/javascript" src="{php} echo Link::Build('components/Site/com_persianlatex/asset/js/cg_cg.min.js');{/php}"></script>
 <script type="text/javascript" src="{php} echo Link::Build('components/Site/com_persianlatex/asset/js/tinymce/plugins/codemirror/mode/javascript/javascript.js');{/php}"></script>
 
-<script type="text/javascript" src="{php} echo Link::Build('components/Site/com_persianlatex/asset/js/persianlatex.js');{/php}"></script>
+<script type="text/javascript" src="{php} echo Link::Build('components/Site/com_persianlatex/asset/js/persianlatex.js');{/php}"></script> 
  
 <!--Content of----------------------------------------------------- pages here-->
 <div id="baseapp">
@@ -82,19 +82,19 @@ defined('_PEXEC') or die('Restricted access');
               
             </div>
         </div>
-        <div id="lpanels" class="ltoobar">
+        <div id="lpanels" class="ltoobar"> 
                 <div  id="editor"> 
                      <div class="texteditor-container">
                          <textarea name="pleditor" id="pleditor">{$obj->sample}</textarea> 
                      </div>
-                </div>
+                </div>        
                 <div id="preview">
                         <div id="priviewtitle">پیش نمایش</div>
                         <div id="display-post">{$obj->sample}</div> 
                         <span id="imgwait" style="display: none"><img  src="{php} echo Link::Build("components/Site/com_persianlatex/asset/images/wait.gif");{/php}"></span>
                 </div>
         </div>
-    </div>
+    </div> 
     <div class="lfooterDrawer">
       <div class="open" ><span class="panel-icon icon-terminal"></span>صفحه کیلید</div>
       <div class="content">
