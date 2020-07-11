@@ -86,6 +86,7 @@ tinymce.init({
               $this->sample="ویرایشگر معمولی";
           }elseif($s==2){
               $this->scriptz = '
+<script type="text/javascript" src="components/Site/com_persianlatex/asset/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async
           src="components/Site/com_persianlatex/asset/js/es5/tex-mml-chtml.js">
